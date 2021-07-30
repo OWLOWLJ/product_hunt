@@ -18,7 +18,8 @@ from django.urls import path,include
 # import product_hunt.products.views
 # from product_hunt import products
 import products.views
-
+from django.conf.urls.static import static
+from django.conf import settings
 # from product_hunt import account
 
 urlpatterns = [
@@ -26,4 +27,4 @@ urlpatterns = [
     path('', products.views.product_list,name='主页'),
     path('acount/', include('account.urls')),
     path('products/', include('products.urls')),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

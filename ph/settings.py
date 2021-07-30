@@ -126,3 +126,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_DIRS = [
     os.path.join(BASE_DIR, 'products/static'),
 ]
+MEDIA_URL = '/media/'  #网址
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')   #文件夹路径,根目录
